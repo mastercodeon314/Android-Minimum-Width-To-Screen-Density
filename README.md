@@ -20,7 +20,7 @@ In the SecSettings.apk, under ```com.android.settings.Display.DensityPreference`
 Fig 1. 
 ![image](https://github.com/mastercodeon314/Android-Minimum-Width-To-Screen-Density/assets/78676320/9c7d3ab0-3ce0-46c4-b325-1b25b2d739f4)
 
-# Que The code
+# The Code
 After asking the AI for some help, I was able to take this code, and reverse the process to do the opposite, convert a screen density value to a Minimum Width value. 
 So naturally, I plugged this code into a simple winforms, grabbed a copy of AdvancedSharpAdbClient, made a few buttons, labels, and sliders, and bam! 
 We now have a proper way reverse engineered straight from the android source code to accurately convert Minimum width to screen density and vice versa!
