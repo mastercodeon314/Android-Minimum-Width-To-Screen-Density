@@ -12,5 +12,7 @@ Naturally, i was curious if there was an adb command to change this value, and u
 
 # Digging in
 I started off with playing with the wm desnity command. This command does work, and does sort of the same thing as changing the Minimum Width developer option.
-Theres a catch tho, for some reason, the value of wm density did not match what the value of Minimum Width reflected in the dev options. Stumped, I went to the SecSettings.apk file for answers. 
+Theres a catch tho, for some reason, the value of wm density did not match what the value of Minimum Width reflected in the dev options. I scoured the internet for an answer on how to convert the density value to a minimum width value, and vice versa, but interestingly enough, no one knew how to do the conversion. 
+Stumped, I went to the SecSettings.apk file for answers. 
 It was here that i found something i never expected. The Min width value in the developer options isnt actually a real setting in android. Its simply a converted value of the density in global settings!
+In the SecSettings.apk, under com.android.settings.Display.DensityPreference, you can see some code in the onDialogClosed function that takes the value the user puts into the Minimum Width settings under the dev options, and converts it to a screen density value based oon the current resolution.
