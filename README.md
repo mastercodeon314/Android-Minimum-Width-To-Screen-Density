@@ -15,4 +15,8 @@ I started off with playing with the wm desnity command. This command does work, 
 Theres a catch tho, for some reason, the value of wm density did not match what the value of Minimum Width reflected in the dev options. I scoured the internet for an answer on how to convert the density value to a minimum width value, and vice versa, but interestingly enough, no one knew how to do the conversion. 
 Stumped, I went to the SecSettings.apk file for answers. 
 It was here that i found something i never expected. The Min width value in the developer options isnt actually a real setting in android. Its simply a converted value of the density in global settings!
-In the SecSettings.apk, under com.android.settings.Display.DensityPreference, you can see some code in the onDialogClosed function that takes the value the user puts into the Minimum Width settings under the dev options, and converts it to a screen density value based oon the current resolution.
+In the SecSettings.apk, under ```com.android.settings.Display.DensityPreference```, you can see some code in the onDialogClosed function that takes the value the user puts into the Minimum Width settings under the dev options, and converts it to a screen density value based oon the current resolution.
+
+Fig 1. 
+![image](https://github.com/mastercodeon314/Android-Minimum-Width-To-Screen-Density/assets/78676320/9c7d3ab0-3ce0-46c4-b325-1b25b2d739f4)
+
